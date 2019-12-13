@@ -17,3 +17,10 @@ doi: 10.1177/0278364917732838<br>
 **Week 1**
 - Getting familiar with Machine Learning/ Neural Network/ GANs
 - Examining ROS data
+
+**Week 2**
+- Tried to make laser scan to point cloud within the ROS functions 
+- However, the data seemed to be unorganized when transferring from one form to the other 
+
+**Week 3**
+- Trying to create an image directly from the raw laser scan data
