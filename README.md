@@ -24,3 +24,7 @@ doi: 10.1177/0278364917732838<br>
 
 **Week 3**
 - Trying to create an image directly from the raw laser scan data
+
+**Week 4**
+- Customize the created image to sync with the camera information
+- Reshape the synced image to ideal size for training
