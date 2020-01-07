@@ -28,3 +28,7 @@ doi: 10.1177/0278364917732838<br>
 **Week 4**
 - Customize the created image to sync with the camera information
 - Reshape the synced image to ideal size for training
+
+**Week 5**
+- Train the model and examine the output
+- Recreate the pix2pix model to suit our purpose
