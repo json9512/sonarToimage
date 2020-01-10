@@ -32,3 +32,8 @@ doi: 10.1177/0278364917732838<br>
 **Week 5**
 - Train the model and examine the output
 - Recreate the pix2pix model to suit our purpose
+
+**Week 6**
+- Create the model to suit our purpose
+- Implement data augmentation techniques on the model
+- Learn how to use the HPC
