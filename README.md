@@ -37,3 +37,6 @@ doi: 10.1177/0278364917732838<br>
 - Create the model to suit our purpose
 - Implement data augmentation techniques on the model
 - Learn how to use the HPC
+
+**Week 7**
+- Try to generate data for angles that are outside the camera frame
