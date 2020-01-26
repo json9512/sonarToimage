@@ -40,3 +40,7 @@ doi: 10.1177/0278364917732838<br>
 
 **Week 7**
 - Try to generate data for angles that are outside the camera frame
+
+**Week 8**
+- Create an image of the full 360 sweep 
+- Apply data augmentation to avoid spotlight effect
