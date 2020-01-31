@@ -1,7 +1,7 @@
 # sonarToimage
 A vacation research scheme project. <br>
 
-start date: 28 Nov 2019 
+start date: 28 Nov 2019 <br>
 end date: 12 Feb 2020
 
 ## Objective ##
