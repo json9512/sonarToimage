@@ -37,9 +37,8 @@ Ideally, it would be magnificent if the model could generate terrain in VR/AR as
 
 ### Reference ###
 
-###### Underwater Cave sonar data:<br>
+###### Underwater cave sonar data near Spain:<br>
 Link: https://cirs.udg.edu/caves-dataset/ <br>
-Sonar data of underwater cave near Spain. <br><br>
 Mallios, A.; Vidal, E.; Campos, R. & Carreras, M. <br>
 Underwater caves sonar data set<br>
 The International Journal of Robotics Research, 2017, 36, 1247-1251<br>
