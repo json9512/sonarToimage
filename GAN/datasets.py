@@ -21,7 +21,6 @@ class ImageDataset(Dataset):
         
         
         img = Image.open(f'{self.image_path}{self.images[index % len(self.images)]}.png')
-        #img = transforms.functional.adjust_gamma(img, 0.7, gain=1)
         scan = Image.open(f'{self.scan_path}{self.scans[index % len(self.scans)]}.png')
         
         if np.random.random() < 0.5:
@@ -30,9 +29,6 @@ class ImageDataset(Dataset):
         
         img = self.transform(img)
         scan = self.transform(scan)
-        
-        #print(f'{self.image_path}{self.images[index % len(self.images)]}.png',\
-        #     f'{self.scan_path}{self.scans[index % len(self.scans)]}.png')
         
         return {"camera": img, "scan": scan}
         
@@ -50,12 +46,7 @@ class TestDataset(Dataset):
     def __getitem__(self, index):
         
         scan = Image.open(f'{self.scan_path}{self.scans[index % len(self.scans)]}.png')
-        #scan = transforms.functional.adjust_gamma(scan, 0.25, gain=1)
-        
         scan = self.transform(scan)
-        
-        #print(f'{self.image_path}{self.images[index % len(self.images)]}.png',\
-        #     f'{self.scan_path}{self.scans[index % len(self.scans)]}.png')
         
         return {"scan": scan}
         
