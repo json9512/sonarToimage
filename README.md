@@ -31,7 +31,7 @@ Majority of the scan data lacked ground truth. <br><br>
 During the test phase, the model was able to produce images for scan data that lacked the ground truths.<br>
 The result was not perfect, however, it was interesting to see the outcome.
 
-## Result ##
+### Result ###
 
 
 ### Limitations & Future Work ###
