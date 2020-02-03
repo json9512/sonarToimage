@@ -14,6 +14,8 @@ The intensity map consists of (intensity value X number of angles) to create an 
 For example, if the intensity map is trying to show 30 degrees of the scan data. <br>
 The dimensions will be (176, 15) where 176 is the maximum intensity value and 15 is 30 degrees / 2.<br>
 (The scans are measured with and angle increment of 2 degrees between each scan).<br><br>
+The CLAHE (Contrast-Limited Adaptive Histogram Equalization) filter was used to adjust the spotlight effect of the raw camera images. <br> 
+Then, the both the intensity map images and the filtered camera images were resized to the same size (64x64). <br><br>
 After resizing the intensity map image and the raw camera image from the dataset to an ideal size for the network to train, <br>
 the intensity map and the camera image are paired together for training. 
 
@@ -28,6 +30,9 @@ One point to consider is that the dataset itself only had camera images for angl
 Majority of the scan data lacked ground truth. <br><br>
 During the test phase, the model was able to produce images for scan data that lacked the ground truths.<br>
 The result was not perfect, however, it was interesting to see the outcome.
+
+##### Result #####
+
 
 ### Limitations & Future Work ###
 The major limitation for this project was the lack of data. The model would have been able to perform better if it were to have more data to be trained with. <br><br>
@@ -62,4 +67,4 @@ Isola, P., Zhu, J. Y., Zhou, T., & Efros, A. A. (2017). Image-to-image translati
 | 6 | - Create the model to suit our purpose<br>- Implement data augmentation techniques on the model<br>- Learn how to use the HPC |
 | 7 | - Try to generate data for angles that are outside the camera frame |
 | 8 | - Create an image of the full 360 sweep<br>- Apply data augmentation to avoid spotlight effect|
-| 9 | - Apply image vignette correction to make the outcome meaningful<br>- Find the correlation between the scan data input and the generated outcome |
+| 9 | - Apply ~~image vignette correction~~ CLAHE to make the outcome meaningful<br>- Find the correlation between the scan data input and the generated outcome |
