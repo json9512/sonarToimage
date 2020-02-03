@@ -28,7 +28,7 @@
 `customize_data_for_gan.py` = Customizes the generated data to suit the GAN model<br>
 `generate_data.py` = Generates the sonar intensity map from the original underwater cave dataset<br>
 
-##### script_for_fullscan.zip #####
+##### script_for_fullscan.zip from `sample` folder #####
 Make sure both scipt files are under GAN directory with the other script files.<br>
 `gen_data_fullscan.py` = Creates GAN generated images from the `data/test` folder<br>
 `gen_fullscan.py` = Creates a single image that attaches all the GAN generated images together
