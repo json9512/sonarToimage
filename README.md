@@ -31,10 +31,10 @@ Majority of the scan data lacked ground truth. <br><br>
 During the test phase, the model was able to produce images for scan data that lacked the ground truths.<br>
 The result was not perfect, however, it was interesting to see the outcome.
 
-### Result ###
+## Result ##
 
 
-### Limitations & Future Work ###
+##### Limitations & Future Work #####
 The major limitation for this project was the lack of data. The model would have been able to perform better if it were to have more data to be trained with. <br><br>
 For the future, the project might be a fonudation that could redesign the way terrains are built in VR/AR environments. <br>
 Currently, the machine learning part is separated from the VR part. However, the project could carry on and merge both parts together to visualize the final product.<br>
