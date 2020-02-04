@@ -24,6 +24,9 @@ The pix2pix model from https://github.com/eriklindernoren/PyTorch-GAN/blob/maste
 Few Conv layers were removed from the Generator to suit the dataset.<br><br>
 For the generator, the intensity map was given to produce an outcome that would be ideally similar to the camera images from the dataset.<br>
 No data augmentation has been implemented in this model. <br>
+<br>
+**Generator Structure**
+![ALT](sample/imgs/gen.PNG)
 
 ##### Test Phase #####
 One point to consider is that the dataset itself only had camera images for angles that were directly below (90 deg) the autonomous vehicle.<br> Hence, only a limited amount of scan data had the ground truth (raw camera image) to be compared with.<br>
