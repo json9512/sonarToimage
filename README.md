@@ -65,7 +65,7 @@ The International Journal of Robotics Research, 2017, 36, 1247-1251<br>
 doi: 10.1177/0278364917732838<br>
 
 ###### pix2pix GAN pytorch implementation: <br>
-Link: https://github.com/eriklindernoren/PyTorch-GAN/blob/master/implementations/pix2pix/pix2pix.py
+Link: https://github.com/eriklindernoren/PyTorch-GAN/blob/master/implementations/pix2pix/
 
 ###### pix2pix paper:<br>
 Link: https://arxiv.org/abs/1611.07004<br>
