@@ -103,19 +103,19 @@ class Discriminator(nn.Module):
     def __init__(self, in_channels=3, kernel_size=4):
         super(Discriminator, self).__init__()
 
-        def discriminator_block(in_filters, out_filters,kernel_size=kernel_size, normalization=True):
-            """Returns downsampling layers of each discriminator block"""
-            layers = [nn.Conv2d(in_filters, out_filters, kernel_size, stride=2, padding=1)]
+        # Creates and returns downsampling layers of each discriminator block
+        def downSamplingLayers(input_size, output_size,kernel_size=kernel_size, normalization=True):
+            layers = [nn.Conv2d(input_size, output_size, kernel_size, stride=2, padding=1)]
             if normalization:
-                layers.append(nn.InstanceNorm2d(out_filters))
+                layers.append(nn.InstanceNorm2d(output_size))
             layers.append(nn.LeakyReLU(0.2, inplace=True))
             return layers
 
         self.model = nn.Sequential(
-            *discriminator_block(in_channels * 2, 64, normalization=False),
-            *discriminator_block(64, 128),
-            *discriminator_block(128, 256),
-            *discriminator_block(256, 512),
+            *downSamplingLayers(in_channels * 2, 64, normalization=False),
+            *downSamplingLayers(64, 128),
+            *downSamplingLayers(128, 256),
+            *downSamplingLayers(256, 512),
             nn.ZeroPad2d((1, 0, 1, 0)),
             nn.Conv2d(512, 1, kernel_size, padding=1, bias=False)
         )

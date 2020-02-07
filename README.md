@@ -45,6 +45,10 @@ After training 5000 samples:<br>
 <br>
 After training 12000 samples:<br>
 ![Alt](sample/imgs/12000.png)
+<br>
+<br>
+Final Image of GAN generated image tiles for all the sonar scans:<br>
+![Alt](sample/imgs/image.png)
 
 ##### Limitations & Future Work #####
 The major limitation for this project was the lack of data. The model would have been able to perform better if it were to have more data to be trained with. <br><br>

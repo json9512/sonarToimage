@@ -28,11 +28,10 @@ if __name__ == '__main__':
     parser.add_argument("--n_epochs", type=int, default=200, help="number of epochs of training")
     parser.add_argument("--dataset_name", type=str, default="GAN_data64", help="name of the dataset")
     parser.add_argument("--batch_size", type=int, default=8, help="size of the batches")
-    parser.add_argument("--lr", type=float, default=0.0002, help="adam: learning rate")
+    parser.add_argument("--lr", type=float, default=0.0005, help="adam: learning rate")
     parser.add_argument("--b1", type=float, default=0.5, help="adam: decay of first order momentum of gradient")
     parser.add_argument("--b2", type=float, default=0.999, help="adam: decay of first order momentum of gradient")
     parser.add_argument("--kernel_size", type=int, default=4, help="size of the kernel")
-    parser.add_argument("--decay_epoch", type=int, default=100, help="epoch from which to start lr decay")
     parser.add_argument("--n_cpu", type=int, default=8, help="number of cpu threads to use during batch generation")
     parser.add_argument("--img_height", type=int, default=64, help="size of image height")
     parser.add_argument("--img_width", type=int, default=64, help="size of image width")
@@ -46,7 +45,7 @@ if __name__ == '__main__':
 
     os.makedirs("images/%s" % opt.dataset_name, exist_ok=True)
     os.makedirs("saved_models/%s" % opt.dataset_name, exist_ok=True)
-    os.makedirs("result/%s" % opt.dataset_name, exist_ok=True)
+    os.makedirs("result/%s" % opt.dataset_name , exist_ok=True)
 
     cuda = True if torch.cuda.is_available() else False
 
@@ -79,6 +78,8 @@ if __name__ == '__main__':
         generator.apply(weights_init_normal)
         discriminator.apply(weights_init_normal)
 
+    print("\n[INFO] Generator Structure: \n", generator)
+    print("\n[INFO] Discriminator Structure: \n", discriminator)
     # Optimizers
     optimizer_G = torch.optim.Adam(generator.parameters(), lr=opt.lr, betas=(opt.b1, opt.b2))
     optimizer_D = torch.optim.Adam(discriminator.parameters(), lr=opt.lr, betas=(opt.b1, opt.b2))
@@ -113,7 +114,6 @@ if __name__ == '__main__':
         with torch.no_grad():
             imgs = next(iter(val_dataloader))
             real_A = Variable(imgs["scan"].type(Tensor))
-            print(generator)
             real_B = Variable(imgs["camera"].type(Tensor))
             
             fake_B = generator(real_A)
@@ -227,7 +227,9 @@ if __name__ == '__main__':
     plt.ylabel("Loss")
     plt.title("Loss Chart")
     plt.legend()
-    plt.savefig("Loss_chart.png")
+    plt.savefig("saved_models/%s/Loss_chart.png" % opt.dataset_name)
 
     torch.save(generator.state_dict(), "saved_models/%s/generator_%d.pth" % (opt.dataset_name, epoch))
     torch.save(discriminator.state_dict(), "saved_models/%s/discriminator_%d.pth" % (opt.dataset_name, epoch))
+
+    print("\n\n[INFO] Training Complete.")
