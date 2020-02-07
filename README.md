@@ -35,7 +35,7 @@ During the test phase, the model was able to produce images for scan data that l
 The result was not perfect, however, it was interesting to see the outcome.
 
 ## Result ##
-The first image is the sonar intensity map<br>
+The first row is the sonar intensity map<br>
 second is the GAN generated image<br>
 third is the original image<br>
 <br>
