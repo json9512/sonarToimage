@@ -24,6 +24,9 @@ The pix2pix model from https://github.com/eriklindernoren/PyTorch-GAN/blob/maste
 Few Conv layers were removed from the Generator to suit the dataset.<br><br>
 For the generator, the intensity map was given to produce an outcome that would be ideally similar to the camera images from the dataset.<br>
 No data augmentation has been implemented in this model. <br>
+<br>
+**Generator Structure**
+![ALT](sample/imgs/gen.PNG)
 
 ##### Test Phase #####
 One point to consider is that the dataset itself only had camera images for angles that were directly below (90 deg) the autonomous vehicle.<br> Hence, only a limited amount of scan data had the ground truth (raw camera image) to be compared with.<br>
@@ -66,7 +69,7 @@ The International Journal of Robotics Research, 2017, 36, 1247-1251<br>
 doi: 10.1177/0278364917732838<br>
 
 ###### pix2pix GAN pytorch implementation: <br>
-Link: https://github.com/eriklindernoren/PyTorch-GAN/blob/master/implementations/pix2pix/pix2pix.py
+Link: https://github.com/eriklindernoren/PyTorch-GAN/blob/master/implementations/pix2pix/
 
 ###### pix2pix paper:<br>
 Link: https://arxiv.org/abs/1611.07004<br>
@@ -84,5 +87,5 @@ Isola, P., Zhu, J. Y., Zhou, T., & Efros, A. A. (2017). Image-to-image translati
 | 7 | - Try to generate data for angles that are outside the camera frame |
 | 8 | - Create an image of the full 360 sweep<br>- Apply data augmentation to avoid spotlight effect|
 | 9 | - Apply ~~image vignette correction~~ CLAHE to make the outcome meaningful<br>- Find the correlation between the scan data input and the generated outcome |
-| 10| - TO do |
+| 10| - Optimize the code, Rewrite the code that were from other sources<br>- Crop the images to get rid of the borders |
 | **Supervisors**| Dr. Ross Brown r.brown@qut.edu.au, Dr. Simon Denman s.denman@qut.edu.au |
