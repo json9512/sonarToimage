@@ -11,7 +11,8 @@
   |_ datasets.py
   |_ models.py
   |_ train.py
-  |-
+  |_ functions_lib.py
+  |_ generate_fullscan.py
   |_ test_generator.py
 ```
 3. Run `python train.py`
@@ -24,6 +25,7 @@
 `train.py` = Script for training the model with the data<br>
 `function_lib.py` = Custom functions for generating the final image<br>
 `generate_fullscan.py` = Generates GAN image tiles for each sonar scan for the angle and outputs the final image<br>
+`test_generator.py` = Tests the Generator with the given angle. Will produce GAN generated images.
 
 ##### data directory #####
 `apply_clahe.py` = Applys Contrast-Limited adaptive histogram equalization to the selected images<br>
