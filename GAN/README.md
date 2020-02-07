@@ -15,7 +15,8 @@
   |_ generate_fullscan.py
   |_ test_generator.py
 ```
-3. Run `python train.py`
+3. Run `python train.py` to train the model.
+4. Run `python generate_fullscan.py` to get the final image
 
 ## Script Explanation ##
 
