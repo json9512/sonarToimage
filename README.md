@@ -83,5 +83,5 @@ Isola, P., Zhu, J. Y., Zhou, T., & Efros, A. A. (2017). Image-to-image translati
 | 7 | - Try to generate data for angles that are outside the camera frame |
 | 8 | - Create an image of the full 360 sweep<br>- Apply data augmentation to avoid spotlight effect|
 | 9 | - Apply ~~image vignette correction~~ CLAHE to make the outcome meaningful<br>- Find the correlation between the scan data input and the generated outcome |
-| 10| - Optimize the code, Rewrite the code that were from other sources |
+| 10| - Optimize the code, Rewrite the code that were from other sources<br>- Crop the images to get rid of the borders |
 | **Supervisors**| Dr. Ross Brown r.brown@qut.edu.au, Dr. Simon Denman s.denman@qut.edu.au |
