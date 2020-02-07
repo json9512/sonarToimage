@@ -13,7 +13,7 @@ Created an intensity map of the sonar scans from the given dataset. <br>
 The intensity map consists of (intensity value X number of angles) to create an image<br>
 For example, if the intensity map is trying to show 30 degrees of the scan data. <br>
 The dimensions will be (176, 15) where 176 is the maximum intensity value and 15 is 30 degrees / 2.<br>
-(The scans are measured with and angle increment of 2 degrees between each scan).<br><br>
+(The scans are measured with an angle increment of 2 degrees between each scan).<br><br>
 The CLAHE (Contrast-Limited Adaptive Histogram Equalization) filter was used to adjust the spotlight effect of the raw camera images. <br> 
 Then, the both the intensity map images and the filtered camera images were resized to the same size (64x64). <br><br>
 After resizing the intensity map image and the raw camera image from the dataset to an ideal size for the network to train, <br>
