@@ -69,4 +69,4 @@ if __name__ == "__main__":
             
             img_sample = torch.cat((real_A.data, fake_B.data), -2)
             # Save output 
-            save_image(img_sample, "result/gen_test_result/%s/%s.png" % (opt.angles, i), nrow=6, normalize=True)
+            save_image(img_sample, "result/%s/gen_test_result/%s/%s.png" % (opt.dataset_name, opt.angles, i), nrow=6, normalize=True)
